@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# 브랜치 연습
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
