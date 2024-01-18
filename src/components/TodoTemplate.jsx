@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 import { useState, useRef } from "react";
+=======
+import { useState } from "react";
+>>>>>>> main
 
 import styled from "styled-components";
 import TodoInsert from "./TodoInsert";
 import TodoList from "./TodoList";
 import TodoItem from "./TodoItem";
 const TodoTemplate = () => {
+<<<<<<< HEAD
   const nextId = useRef(3);
+=======
+>>>>>>> main
   const [todos, setTodos] = useState([
     { id: 0, text: "리액트 기초 알아보기", checked: false },
     {
@@ -16,6 +23,7 @@ const TodoTemplate = () => {
     { id: 2, text: "투두 리스트 하기", checked: false },
   ]);
 
+<<<<<<< HEAD
   const onInsert = (text) => {
     const todo = [
       {
@@ -30,12 +38,19 @@ const TodoTemplate = () => {
   const onToggle = () => {};
   const onDelete = () => {};
 
+=======
+>>>>>>> main
   return (
     <>
       <TodoContainer>
         <TodoHeader>일정 관리</TodoHeader>
+<<<<<<< HEAD
         <TodoInsert onInsert={onInsert} />
         <TodoList onToggle={onToggle} onDelete={onDelete} />
+=======
+        <TodoInsert />
+        <TodoList />
+>>>>>>> main
       </TodoContainer>
     </>
   );

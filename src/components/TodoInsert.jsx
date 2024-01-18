@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";
 const TodoInsert = ({ onInsert }) => {
   const [value, setValue] = useState("");
@@ -14,5 +15,9 @@ const TodoInsert = ({ onInsert }) => {
       <button onClick={addItem}>+</button>
     </>
   );
+=======
+const TodoInsert = () => {
+  return <></>;
+>>>>>>> main
 };
 export default TodoInsert;

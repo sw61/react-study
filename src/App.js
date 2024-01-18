@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import logo from "./logo.svg";
+>>>>>>> main
 import "./App.css";
 import TodoTemplate from "./components/TodoTemplate";
 
