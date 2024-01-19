@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import TodoItem from "./TodoItem";
 
 const TodoList = (todos, onToggle, onDelete) => {
@@ -16,10 +15,5 @@ const TodoList = (todos, onToggle, onDelete) => {
       </ul>
     </>
   );
-=======
-const TodoList = () => {
-  return <>
-  </>;
->>>>>>> main
 };
 export default TodoList;
