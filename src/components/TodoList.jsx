@@ -1,9 +1,11 @@
+import styled from "styled-components";
 import TodoItem from "./TodoItem";
 
-const TodoList = (todos, onToggle, onDelete) => {
+const TodoList = ({ todos, onToggle, onDelete }) => {
+  console.log(todos);
   return (
     <>
-      <ul>
+      <ListBox>
         {todos.map((todo) => (
           <TodoItem
             todo={todo}
@@ -12,8 +14,16 @@ const TodoList = (todos, onToggle, onDelete) => {
             onDelete={onDelete}
           />
         ))}
-      </ul>
+      </ListBox>
     </>
   );
 };
 export default TodoList;
+const ListBox = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+`;

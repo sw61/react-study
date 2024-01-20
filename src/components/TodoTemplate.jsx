@@ -27,25 +27,45 @@ const TodoTemplate = () => {
     setTodos(todos.concat(todo));
     nextId.current++;
   };
-  const onToggle = () => {};
-  const onDelete = () => {};
-
+  const onToggle = (id) => {
+    const newArray = todos.map((todo) =>
+      todo.id === id ? { ...todo, checked: !todo.checked } : todo
+    );
+    setTodos(newArray);
+    // id가 같으면 ? check를 반대로 : 그대로 출력
+  };
+  const onDelete = (id) => {
+    const DeleteItem = todos.filter((todos) => todos.id !== id);
+    setTodos(DeleteItem);
+  };
   return (
     <>
       <TodoContainer>
-        <TodoHeader>일정 관리</TodoHeader>
+        <TodoHeader>일 정 관 리</TodoHeader>
         <TodoInsert onInsert={onInsert} />
-        <TodoList onToggle={onToggle} onDelete={onDelete} />
+        <TodoList todos={todos} onToggle={onToggle} onDelete={onDelete} />
       </TodoContainer>
     </>
   );
 };
 export default TodoTemplate;
-const TodoContainer = styled.div``;
+
+const TodoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  border: solid 1px #e1e1e1;
+  border-radius: 5px;
+  width: 500px;
+  margin: 0 auto;
+`;
 const TodoHeader = styled.div`
-  background-color: #d399d3;
-  color: white;
+  background-color: #86b6f6;
   font-size: 22px;
+  border-radius: 5px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 // 1. 할 일 입력받은 후 추가버튼 클릭시 목록에 추가.
